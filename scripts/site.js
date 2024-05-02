@@ -3,6 +3,7 @@
 var newsLetterForm;
 var newsLetterFormBody;
 var thankYouForSigningUpLabel;
+var somethingWentWrongLabel;
 var submitSpinner;
 
 var emailInput;
@@ -23,11 +24,15 @@ const submitForm = async (event) => {
         method: "POST",
         body: JSON.stringify({ email, captchaKey }),
     })
-        .finally((_) => (submitSpinner.hidden = true))
         .then((_) => {
             newsLetterFormBody.hidden = true;
             thankYouForSigningUpLabel.hidden = false;
-        });
+        })
+        .catch((_) => {
+            somethingWentWrongLabel.hidden = false;
+            thankYouForSigningUpLabel.hidden = true;
+        })
+        .finally((_) => (submitSpinner.hidden = true));
 };
 
 const init = () => {
@@ -39,6 +44,7 @@ const init = () => {
     hcaptchaResponseInput = document.getElementById("hcaptcha-input");
 
     thankYouForSigningUpLabel = document.getElementById("thank-you-for-signing-up");
+    somethingWentWrongLabel = document.getElementById("something-went-wrong");
     submitSpinner = document.getElementById("submit-spinner");
 };
 
