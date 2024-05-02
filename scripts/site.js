@@ -24,7 +24,12 @@ const submitForm = async (event) => {
         method: "POST",
         body: JSON.stringify({ email, captchaKey }),
     })
-        .then((_) => {
+        .then((resp) => {
+            if (resp.status !== 200) {
+                somethingWentWrongLabel.hidden = false;
+                thankYouForSigningUpLabel.hidden = true;
+                return;
+            }
             newsLetterFormBody.hidden = true;
             thankYouForSigningUpLabel.hidden = false;
         })
