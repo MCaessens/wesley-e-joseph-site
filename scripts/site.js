@@ -27,7 +27,7 @@ const submitForm = async (event) => {
         .then((resp) => {
             if (resp.status !== 200) {
                 somethingWentWrongLabel.hidden = false;
-                thankYouForSigningUpLabel.hidden = true;
+                newsLetterFormBody.hidden = true;
                 return;
             }
             newsLetterFormBody.hidden = true;
