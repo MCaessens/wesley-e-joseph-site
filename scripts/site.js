@@ -20,7 +20,7 @@ const submitForm = async (event) => {
     const captchaKey = hcaptchaResponseInput.value;
     const email = emailInput.value;
 
-    await fetch("http://localhost:7071/api/sign-up", {
+    await fetch("https://wesley-author-site.azurewebsites.net/api/sign-up", {
         method: "POST",
         body: JSON.stringify({ email, captchaKey }),
     })
