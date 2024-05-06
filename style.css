@@ -20,3 +20,7 @@ html {
 .nav-link {
     font-family: Cinzel;
 }
+img {
+    width: 350px;
+    height: 350px;
+}
