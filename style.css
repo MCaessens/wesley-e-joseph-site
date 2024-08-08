@@ -13,14 +13,14 @@ html {
     min-height: 100vh;
 }
 
+body {
+    padding-bottom: 70px;
+}
+
 .navbar-brand {
     font-family: Cinzel-Decorative;
 }
 
 .nav-link {
     font-family: Cinzel;
-}
-img {
-    width: 350px;
-    height: 350px;
 }
