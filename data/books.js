@@ -8,6 +8,7 @@ const books = [
             "Together with the friends he makes along the way, he embarks on a fantastical journey to bring back the dancing seasons of ages lost and free his world from winter's deadly beak. ",
         ],
         imageName: "Owlbound.png",
+        imageLinkTo: "https://beacons.ai/owlbound",
     },
     {
         title: "Owlbound #2",

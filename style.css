@@ -29,12 +29,17 @@ body {
     width: 15vw;
 }
 
-img.book {
+a.book {
     height: auto;
     width: 70%;
     margin: auto;
     margin-top: 10%;
     border-radius: 10px;
+}
+
+a.disabled-link {
+    pointer-events: none;
+    cursor: default;
 }
 
 @media only screen and (max-width: 2800px) {
@@ -59,7 +64,7 @@ img.book {
     .card {
         width: 50vw;
     }
-    img.book {
+    a.book {
         height: unset;
         width: unset;
         margin: unset;

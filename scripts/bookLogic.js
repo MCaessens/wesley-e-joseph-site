@@ -22,6 +22,13 @@ const createBookElements = () => {
         });
         cardBody.append(titleEl);
 
+        const cardImageLink = bookTemplate.content.querySelector("a.book");
+        if (book.imageLinkTo) {
+            cardImageLink.href = book.imageLinkTo;
+        } else {
+            cardImageLink.classList.add("disabled-link");
+        }
+
         const cardImage = bookTemplate.content.querySelector("img.card-img-top");
         cardImage.src = `./images/${book.imageName}`;
 
