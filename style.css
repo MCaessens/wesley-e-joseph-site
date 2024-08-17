@@ -60,10 +60,11 @@ img.book {
         width: 50vw;
     }
     img.book {
-        height: auto;
-        width: 80%;
-        margin: auto;
-        border-radius: 10px;
+        height: unset;
+        width: unset;
+        margin: unset;
+        margin-top: unset;
+        border-radius: unset;
     }
 }
 
