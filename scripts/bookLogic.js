@@ -31,6 +31,7 @@ const createBookElements = () => {
 
         const cardImage = bookTemplate.content.querySelector("img.card-img-top");
         cardImage.src = `./images/${book.imageName}`;
+        cardImage.alt = `Covert art for ${book.title}`;
 
         const tagContainer = Object.assign(document.createElement("p"), { className: "card-text" });
         book.tags.forEach((tag, index) => {
